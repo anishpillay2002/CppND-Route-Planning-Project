@@ -29,7 +29,10 @@ git clone git@github.com:udacity/CppND-Route-Planning-Project.git --recurse-subm
 * IO2D
   * Installation instructions for all operating systems can be found [here](https://github.com/cpp-io2d/P0267_RefImpl/blob/master/BUILDING.md)
   * This library must be built in a place where CMake `find_package` will be able to find it
- 
+
+ #### NOTE:
+ Follow the instructions below to install io2d on Linux
+ https://knowledge.udacity.com/questions/164503
 
 ## Compiling and Running
 
