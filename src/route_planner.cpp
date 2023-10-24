@@ -95,7 +95,6 @@ std::vector<RouteModel::Node> RoutePlanner::ConstructFinalPath(RouteModel::Node 
     // Create path_found vector
     distance = 0.0f;
     std::vector<RouteModel::Node> path_found ={};
-    std::cout<<"Distance is "<<distance<<"\n";
     // TODO: Implement your solution here.
     while(current_node != this->start_node){
         // Adding current node to list
@@ -103,17 +102,12 @@ std::vector<RouteModel::Node> RoutePlanner::ConstructFinalPath(RouteModel::Node 
         // Adding the distance to its parent
         
         distance += current_node->distance(*current_node->parent);
-        std::cout<<"Distance 2is "<<distance<<"\n";
         // Assigning the parent as the current node and tracing back
         current_node = current_node->parent;
     }
 
     // Finally, appending the start node
     path_found.emplace_back(*current_node);
-    // Adding its distance
-    std::cout<<"Distance 3is "<<distance<<"\n";
-    // distance += current_node->distance(*current_node->parent);
-    std::cout<<"Distance 3is "<<distance<<"\n";
     // Reversing the order so we get start to finish
     std::reverse(path_found.begin(), path_found.end());
 
